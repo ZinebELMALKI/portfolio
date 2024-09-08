@@ -258,6 +258,9 @@ header.sticky {
     box-shadow: 0 0 5px var(--main-color);
     transition: all .50s ease;
     cursor: pointer;
+    min-height: 600px;
+    height: 100%;
+    
 }
 
 .box img {
@@ -287,6 +290,7 @@ header.sticky {
     color: var(--text-color);
     border-bottom: 2px solid #5d6c83;
     transition: all .50s ease;
+  
 }
 
 .box i {
@@ -611,4 +615,23 @@ video {
     width: 100%;
     height: auto;
     border: 2px solid #5d6c83;
+}
+
+/* Masquer le bouton contact dans la version mobile */
+@media (max-width: 950px) {
+    .top-btnn {
+        display: none;
+    }
+
+    /* Afficher le lien Contact dans le menu burger */
+    .navlist a[href="#contact"] {
+        display: block;
+        padding: 17px;
+        font-size: 22px;
+    }
+}
+
+/* Afficher le menu burger lorsque l'icône est cliquée */
+.navlist.active {
+    right: 0;
 }
